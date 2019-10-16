@@ -36,8 +36,15 @@ namespace ws_SushiBar.Controllers
 
         public IActionResult Stocks()
         {
+            List<Stocks> stocks = new List<Stocks>
+            {
+                new Stocks {Name = "Всего понемногу много!", Description="Купи всего по немногу и получи столько же!", Img="/images/stocks/01.jpg"},
+                new Stocks {Name = "10 за 5", Description="10 штук по цене 5-ти!!!", Img="/images/stocks/02.jpg"},
+                new Stocks {Name = "Всего понемногу много!", Description="Купи всего по немногу и получи столько же!", Img="/images/stocks/03.jpg"}
+            };  
+
             ViewData["Title"] = "SUHI BAR - Акции";
-            return View();
+            return View(stocks);
         }
 
         public IActionResult Contact()
