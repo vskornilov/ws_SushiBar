@@ -1,0 +1,13 @@
+﻿@model IEnumerable<ws_SushiBar.ViewModels.FotoView>
+
+<div class="row">
+
+    @foreach (var item in Model)
+    {
+        <div class="col-sx p-2 thumb">
+            <a data-fancybox="gallery" href="@item.Img">
+                <img width="250" height="180" src="@item.Img" alt="@item.Id">
+            </a>
+        </div>
+    }
+</div>
