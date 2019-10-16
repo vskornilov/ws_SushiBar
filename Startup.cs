@@ -28,7 +28,7 @@ namespace ws_SushiBar
             app.UseMvc(route =>
                 route.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{Action=Index}"
+                    template: "{controller=Home}/{Action=Index}/{id?}"
                     )
                 );
 

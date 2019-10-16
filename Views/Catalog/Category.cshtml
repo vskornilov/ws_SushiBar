@@ -1,0 +1,25 @@
+﻿@model ws_SushiBar.ViewModels.Product
+
+<div class="row">
+        <div class="card-deck col-sx p-2">
+            <div class="card" style="width: 18rem;">
+                <!-- Шапка карточки -->
+                <div class="card-header">
+                    <h5 class="card-title text-center font-weight-bold">@Model.Name</h5>
+                </div>
+                <!-- Шапка карточки -->
+                <!-- Тело карточки -->
+                <div class="card-body">
+                    <a href=""><h6 class="card-title text-center font-weight-bold">@Model.Category</h6></a>
+                    <img class="card-img-top" src="@Model.Img" alt="@Model.Name"><hr />
+                    <p class="card-text">@Model.Description</p>
+                </div>
+                <!-- Тело карточки -->
+                <!-- Подвал карточки -->
+                <div class="card-footer">
+                    <p class="text-font-small font-weight-bold">Цена: @Model.Price.ToString("c") </p>
+                </div>
+                <!-- Подвал карточки -->
+            </div>
+        </div>
+</div>

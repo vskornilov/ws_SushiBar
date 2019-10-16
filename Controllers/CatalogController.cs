@@ -12,8 +12,8 @@ namespace ws_SushiBar.Controllers
     {
         private readonly List<Product> products = new List<Product>
             {
-            new Product{ Name="Суши Гункан", Img="/images/product/rolls/Guncan.jpg", Category="Суши", Description="рис, краб (имитация), спайси соус.", Price=70 },
-            new Product{ Name="Норвежский", Img="/images/product/sushi/Norvezhskij.jpg", Category="Роллы", Description="Сыр, помидор, лук, лосось, стружка тунца, спайси соус", Price=235 },
+            new Product{Id=1, Name="Суши Гункан", Img="/images/product/rolls/Guncan.jpg", Category="Суши", Description="рис, краб (имитация), спайси соус.", Price=70 },
+            new Product{Id=2, Name="Норвежский", Img="/images/product/sushi/Norvezhskij.jpg", Category="Роллы", Description="Сыр, помидор, лук, лосось, стружка тунца, спайси соус", Price=235 },
             new Product{ Name="Филадельфия классическая", Img="/images/product/sushi/Filadelfiya.jpg", Category="Роллы", Description="Сыр, огурец, лосось", Price=70 },
             new Product{ Name="Вок с говядиной в остром соусе", Img="/images/product/vok/01.jpg", Category="Вок", Description="Говядина, лапша гречневая, овощной микс ( капуста, морковь, перец бол., лук репчатый, фасоль) соус (якитори, острый), масло чесночное, лук зелёный, кунжут.", Price=245 },
             new Product{ Name="Вок лосось-креветка в кисло-сладком соусе", Img="/images/product/vok/02.jpg", Category="Вок", Description="Креветка, лосось, Лапша рисовая, овощной микс ( капуста, морковь, перец бол., лук репчатый, фасоль) соус (якитори, кисло-сладкий), масло чесночное, лук зелёный, кунжут.", Price=270 },
@@ -24,6 +24,11 @@ namespace ws_SushiBar.Controllers
         {
             ViewData["Title"] = "SUHI BAR - Каталог";
             return View(products);
+        }
+
+        public IActionResult Category(string category)
+        {
+            return View(products.FirstOrDefault(x => x.Category == "Роллы"));
         }
     }
 }
