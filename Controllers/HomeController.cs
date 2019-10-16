@@ -12,22 +12,6 @@ namespace ws_SushiBar.Controllers
             return View();
         }
 
-        public IActionResult Catalog()
-        {
-            List<Product> products = new List<Product>
-            {
-            new Product{Id=1, Name="Суши Гункан", Img="/images/product/rolls/Guncan.jpg", Category="Суши", Description="рис, краб (имитация), спайси соус.", Price=70 },
-            new Product{Id=2, Name="Норвежский", Img="/images/product/sushi/Norvezhskij.jpg", Category="Роллы", Description="Сыр, помидор, лук, лосось, стружка тунца, спайси соус", Price=235 },
-            new Product{Id=3, Name="Филадельфия классическая", Img="/images/product/sushi/Filadelfiya.jpg", Category="Роллы", Description="Сыр, огурец, лосось", Price=70 },
-            new Product{Id=4, Name="Вок с говядиной в остром соусе", Img="/images/product/vok/01.jpg", Category="Вок", Description="Говядина, лапша гречневая, овощной микс ( капуста, морковь, перец бол., лук репчатый, фасоль) соус (якитори, острый), масло чесночное, лук зелёный, кунжут.", Price=245 },
-            new Product{Id=5, Name="Вок лосось-креветка в кисло-сладком соусе", Img="/images/product/vok/02.jpg", Category="Вок", Description="Креветка, лосось, Лапша рисовая, овощной микс ( капуста, морковь, перец бол., лук репчатый, фасоль) соус (якитори, кисло-сладкий), масло чесночное, лук зелёный, кунжут.", Price=270 },
-            new Product{Id=6, Name="Морс из черной смородины 0,3л", Img="/images/product/napitki/mors.jpg", Category="Напитки", Description="0", Price=40 }
-            };
-
-            ViewData["Title"] = "SUHI BAR - Каталог";
-            return View(products);
-        }
-
         public IActionResult Foto()
         {
             List<FotoView> fotoViews = new List<FotoView>
@@ -50,7 +34,7 @@ namespace ws_SushiBar.Controllers
             return View(fotoViews);
         }
 
-        public IActionResult Stock()
+        public IActionResult Stocks()
         {
             ViewData["Title"] = "SUHI BAR - Акции";
             return View();
